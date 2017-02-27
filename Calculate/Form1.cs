@@ -80,11 +80,11 @@ namespace Calculate
             string v1 = this.txtVConvertir.Text;
             if (v1 != "")
             {
-                Int64 n1 = Convert.ToInt64(v1);
+                //Int64 n1 = Convert.ToInt64(v1);
                 if (cmbConvertir.SelectedItem != null)
                 {
                     string cmbo = cmbConvertir.SelectedItem.ToString();
-                    txtResult.Text = Conversion.Calculo(n1, cmbo);
+                    txtResult.Text = Conversion.Calculo(v1, cmbo);
                 }
                 else
                 {
