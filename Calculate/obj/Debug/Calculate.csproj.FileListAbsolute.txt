@@ -1,0 +1,9 @@
+c:\users\monterrosa\documents\visual studio 2015\Projects\Calculate\Calculate\bin\Debug\Calculate.exe.config
+c:\users\monterrosa\documents\visual studio 2015\Projects\Calculate\Calculate\bin\Debug\Calculate.exe
+c:\users\monterrosa\documents\visual studio 2015\Projects\Calculate\Calculate\bin\Debug\Calculate.pdb
+c:\users\monterrosa\documents\visual studio 2015\Projects\Calculate\Calculate\obj\Debug\Calculate.csprojResolveAssemblyReference.cache
+c:\users\monterrosa\documents\visual studio 2015\Projects\Calculate\Calculate\obj\Debug\Calculate.Properties.Resources.resources
+c:\users\monterrosa\documents\visual studio 2015\Projects\Calculate\Calculate\obj\Debug\Calculate.csproj.GenerateResource.Cache
+c:\users\monterrosa\documents\visual studio 2015\Projects\Calculate\Calculate\obj\Debug\Calculate.exe
+c:\users\monterrosa\documents\visual studio 2015\Projects\Calculate\Calculate\obj\Debug\Calculate.pdb
+c:\users\monterrosa\documents\visual studio 2015\Projects\Calculate\Calculate\obj\Debug\Calculate.frmPrincipal.resources
