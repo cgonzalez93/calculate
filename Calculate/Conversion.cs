@@ -21,7 +21,7 @@ namespace Calculate
                     resultado = BinarioToDecimal(v);
                     break;
                 case "BINARIO - HEXADECIMAL":
-                    resultado = BinarioToHexadecimal(v);
+                    resultado = BinarioToHexadecimal(v).ToUpper();
                     break;
                 case "HEXADECIMAL - BINARIO":
                     resultado = HexadecimalToBinario(v);
@@ -30,19 +30,27 @@ namespace Calculate
                     resultado = HexadecimalToDecimal(v);
                     break;
                 case "DECIMAL - HEXADECIMAL":
-                    resultado = DecimalToHexadecimal(v);
+                    resultado = DecimalToHexadecimal(v).ToUpper();
                     break;
             }
             return resultado;
         }
-
+        #region METODOS DE CONVERSION
         static string DecimalToBinario(string v)
         {
             string result = "";
             string aux = v;
             // valor binario 
-            result = Convert.ToString(Convert.ToInt32(aux, 10), 2);
-            return result;
+            if (Validator.IsDecimal(aux))
+            {
+                result = Convert.ToString(Convert.ToInt32(aux, 10), 2);
+                return result;
+            }
+            else
+            {
+                result = "INGRESE NUM. DECIMAL";
+                return result;
+            }
             //string result = "";
             //Int64 aux = Convert.ToInt64(v); // seteo temporal
             //if (aux > 0)
@@ -68,9 +76,19 @@ namespace Calculate
         {
             string result = "";
             string aux = v;
-            // valor binario 
-            result = Convert.ToString(Convert.ToInt32(aux, 2));
-            return result;
+
+            if (Validator.IsBinario(v))
+            {
+                // valor binario 
+                result = Convert.ToString(Convert.ToInt32(aux, 2));
+                return result;
+            }
+            else
+            {
+                result = "INGRESE NUM. BINARIO";
+                return result;
+            }
+
 
             // FORMA EXTENDIDA
             //string result = "";
@@ -96,9 +114,17 @@ namespace Calculate
         {
             string result = "";
             string aux = v;
-            // convierto a binario y luego a hexadecimal
-            result = Convert.ToString(Convert.ToInt32(aux, 2), 16).ToUpper();
-            return result;
+            if (Validator.IsHexadeximal(aux))
+            {
+                // convierto a binario y luego a hexadecimal
+                result = Convert.ToString(Convert.ToInt32(aux, 2), 16).ToUpper();
+                return result;
+            }
+            else
+            {
+                result = "INGRESE NUM. BINARIO";
+                return result;
+            }
 
 
             // OTRA FORMA 
@@ -133,26 +159,49 @@ namespace Calculate
         {
             string result = "";
             string aux = v;
-            result = Convert.ToString(Convert.ToInt64(aux, 16), 2);
-            return result;
+            if (Validator.IsHexadeximal(aux))
+            {
+                result = Convert.ToString(Convert.ToInt64(aux, 16), 2);
+                return result;
+            }
+            else
+            {
+                result = "INGRESE NUM. HEXADECIMAL";
+                return result;
+            }
         }
 
         static string HexadecimalToDecimal(string v)
         {
             string result = "";
             string aux = v;
-            // convierto a hexadecimal y luego a hexadecimal
-            result = Convert.ToString(Convert.ToInt64(aux, 16), 10);
-            return result;
+            if (Validator.IsHexadeximal(aux))
+            {
+                result = Convert.ToString(Convert.ToInt64(aux, 16), 10);
+                return result;
+            }
+            else
+            {
+                result = "INGRESE NUM. HEXADECIMAL";
+                return result;
+            }
         }
 
         static string DecimalToHexadecimal(string v)
         {
             string result = "";
             string aux = v;
-            // convierto a hexadecimal y luego a hexadecimal
-            result = Convert.ToString(Convert.ToInt64(aux, 10), 16);
-            return result;
+            if (Validator.IsDecimal(aux))
+            {
+                result = Convert.ToString(Convert.ToInt64(aux, 10), 16);
+                return result;
+            }
+            else
+            {
+                result = "INGRESE NUM. DECIMAL";
+                return result;
+            }
         }
+        #endregion
     }
 }
