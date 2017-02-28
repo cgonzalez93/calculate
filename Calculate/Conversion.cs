@@ -43,7 +43,7 @@ namespace Calculate
             // valor binario 
             if (Validator.IsDecimal(aux))
             {
-                result = Convert.ToString(Convert.ToInt32(aux, 10), 2);
+                result = Convert.ToString(Convert.ToInt64(aux, 10), 2);
                 return result;
             }
             else
@@ -114,10 +114,10 @@ namespace Calculate
         {
             string result = "";
             string aux = v;
-            if (Validator.IsHexadeximal(aux))
+            if (Validator.IsBinario(aux))
             {
                 // convierto a binario y luego a hexadecimal
-                result = Convert.ToString(Convert.ToInt32(aux, 2), 16).ToUpper();
+                result = Convert.ToString(Convert.ToInt64(aux, 2), 16).ToUpper();
                 return result;
             }
             else

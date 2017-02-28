@@ -96,5 +96,11 @@ namespace Calculate
                 txtResult.Text = "INGRESE UN VALOR";
             }
         }
+
+        private void lklNombre_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            lklNombre.LinkVisited = true;
+            System.Diagnostics.Process.Start("https://www.linkedin.com/in/carlos-monterrosa-503032115");
+        }
     }
 }

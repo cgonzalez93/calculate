@@ -41,6 +41,7 @@
             this.lblNum1 = new System.Windows.Forms.Label();
             this.txtCCNum1 = new System.Windows.Forms.TextBox();
             this.tbpConversion = new System.Windows.Forms.TabPage();
+            this.btnCalConvertir = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtResult = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -48,12 +49,17 @@
             this.txtVConvertir = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tbpCreador = new System.Windows.Forms.TabPage();
-            this.btnCalConvertir = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lklNombre = new System.Windows.Forms.LinkLabel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.tabForm.SuspendLayout();
             this.tbpCalculos.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tbpConversion.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.tbpCreador.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabForm
@@ -207,6 +213,16 @@
             this.tbpConversion.Text = "Conversión";
             this.tbpConversion.UseVisualStyleBackColor = true;
             // 
+            // btnCalConvertir
+            // 
+            this.btnCalConvertir.Location = new System.Drawing.Point(195, 161);
+            this.btnCalConvertir.Name = "btnCalConvertir";
+            this.btnCalConvertir.Size = new System.Drawing.Size(156, 35);
+            this.btnCalConvertir.TabIndex = 5;
+            this.btnCalConvertir.Text = "Calcular";
+            this.btnCalConvertir.UseVisualStyleBackColor = true;
+            this.btnCalConvertir.Click += new System.EventHandler(this.btnCalConvertir_Click);
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.txtResult);
@@ -258,6 +274,7 @@
             this.txtVConvertir.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtVConvertir.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtVConvertir.Location = new System.Drawing.Point(13, 47);
+            this.txtVConvertir.MaxLength = 15;
             this.txtVConvertir.Name = "txtVConvertir";
             this.txtVConvertir.Size = new System.Drawing.Size(338, 31);
             this.txtVConvertir.TabIndex = 1;
@@ -274,23 +291,58 @@
             // 
             // tbpCreador
             // 
+            this.tbpCreador.BackColor = System.Drawing.Color.White;
             this.tbpCreador.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbpCreador.Controls.Add(this.label4);
+            this.tbpCreador.Controls.Add(this.label3);
+            this.tbpCreador.Controls.Add(this.lklNombre);
+            this.tbpCreador.Controls.Add(this.pictureBox1);
             this.tbpCreador.Location = new System.Drawing.Point(4, 4);
             this.tbpCreador.Name = "tbpCreador";
             this.tbpCreador.Size = new System.Drawing.Size(366, 341);
             this.tbpCreador.TabIndex = 2;
             this.tbpCreador.Text = "Creador";
-            this.tbpCreador.UseVisualStyleBackColor = true;
             // 
-            // btnCalConvertir
+            // label3
             // 
-            this.btnCalConvertir.Location = new System.Drawing.Point(195, 161);
-            this.btnCalConvertir.Name = "btnCalConvertir";
-            this.btnCalConvertir.Size = new System.Drawing.Size(156, 35);
-            this.btnCalConvertir.TabIndex = 5;
-            this.btnCalConvertir.Text = "Calcular";
-            this.btnCalConvertir.UseVisualStyleBackColor = true;
-            this.btnCalConvertir.Click += new System.EventHandler(this.btnCalConvertir_Click);
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Impact", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(37, 253);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(292, 17);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Tecnologo en Desarrollo de Sistema de Información";
+            // 
+            // lklNombre
+            // 
+            this.lklNombre.AutoSize = true;
+            this.lklNombre.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lklNombre.Location = new System.Drawing.Point(39, 230);
+            this.lklNombre.Name = "lklNombre";
+            this.lklNombre.Size = new System.Drawing.Size(290, 23);
+            this.lklNombre.TabIndex = 1;
+            this.lklNombre.TabStop = true;
+            this.lklNombre.Text = "Carlos Alberto Gonzalez Monterrosa";
+            this.lklNombre.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lklNombre_LinkClicked);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Calculate.Properties.Resources.io;
+            this.pictureBox1.Location = new System.Drawing.Point(92, 44);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(193, 172);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(75, 270);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(222, 19);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "cgonzalezmonterrosa@gmail.com";
             // 
             // frmPrincipal
             // 
@@ -314,6 +366,9 @@
             this.tbpConversion.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.tbpCreador.ResumeLayout(false);
+            this.tbpCreador.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -340,6 +395,10 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txtResult;
         private System.Windows.Forms.Button btnCalConvertir;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.LinkLabel lklNombre;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }
 
