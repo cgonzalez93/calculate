@@ -10,10 +10,11 @@ namespace Calculate
     {
         public static string Calculo(string n1, string n2, string operacion) {
 
+            #region VARIABLES
             string resultado = "";
-
             double val1 = 0;
             double val2 = 0;
+            #endregion
 
             if (n1 != "" || n2 != "")
             {
@@ -37,7 +38,7 @@ namespace Calculate
                         }
                         catch (DivideByZeroException ex)
                         {
-                            resultado = "IMPOSIBLE DIVIDIR ENTRE CERO";
+                            resultado = "IMPOSIBLE DIVIDIR ENTRE CERO: \nDetalle: "+ex;
                         }
                         break;
                     case "POTENCIA":

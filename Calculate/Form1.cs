@@ -65,16 +65,6 @@ namespace Calculate
             }
         }
 
-        private void cmbConvertir_SelectionChangeCommitted(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cmbConvertir_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-        }
-
         private void btnCalConvertir_Click(object sender, EventArgs e)
         {
             string v1 = this.txtVConvertir.Text;
